@@ -30,5 +30,15 @@
 
     </form>
 </div>
+<script>
+    document.getElementById('registerForm').onsubmit = e => {
+        const password = document.getElementById('password')
+        if(password.value < 1 || password.value !== document.getElementById('password2').value) {
+            alert('Please provide the same password in both fields')
+            return false;
+        }
+        return true
+    }
+</script>
 
 <% include ./partials/bottom %>
